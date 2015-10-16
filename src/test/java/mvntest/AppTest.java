@@ -9,31 +9,31 @@ public class AppTest
 {
     @Test
     public void simpleDollarsSum() {
-      Dollar fiveBucks = new Dollar(5);
-      Dollar threeBucks = new Dollar(3);
+      Banknote fiveBucks = Banknote.dollar(5);
+      Banknote threeBucks = Banknote.dollar(3);
 
-      assertEquals(new Dollar(8), fiveBucks.add(threeBucks));
+      assertEquals(Banknote.dollar(8), fiveBucks.add(threeBucks));
     }
 
     @Test
     public void simpleDollarsMoltiplication() {
-      Dollar fiveBucks = new Dollar(5);
+      Banknote fiveBucks = Banknote.dollar(5);
 
-      assertEquals(new Dollar(10), fiveBucks.times(2));
+      assertEquals(Banknote.dollar(10), fiveBucks.times(2));
     }
 
     @Test
     public void simpleEurosMoltiplication() {
-      Euro fiveEuro = new Euro(5);
+      Banknote fiveEuro = Banknote.euro(5);
 
-      assertEquals(new Euro(10), fiveEuro.times(2));
+      assertEquals(Banknote.euro(10), fiveEuro.times(2));
     }
 
     @Test
     public void simpleEurosSum() {
-      Euro fiveEuro = new Euro(5);
-      Euro fourEuro = new Euro(4);
+      Banknote fiveEuro = Banknote.euro(5);
+      Banknote fourEuro = Banknote.euro(4);
 
-      assertEquals(new Euro(9), fiveEuro.add(fourEuro));
+      assertEquals(Banknote.euro(9), fiveEuro.add(fourEuro));
     }
 }

@@ -6,11 +6,11 @@ public class Dollar extends Banknote {
     this.amount = amount;
   }
 
-  public Dollar add(Dollar addend) {
+  public Banknote add(Banknote addend) {
     return new Dollar(this.amount + addend.amount);
   }
 
-  public Dollar times(int moltiplicator) {
+  public Banknote times(int moltiplicator) {
     return new Dollar(this.amount * moltiplicator); 
   }
 

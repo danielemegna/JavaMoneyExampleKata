@@ -6,11 +6,11 @@ class Euro extends Banknote
     this.amount = amount;
   }
 
-  public Euro add(Euro addend) {
+  public Banknote add(Banknote addend) {
     return new Euro(this.amount + addend.amount);
   }
 
-  public Euro times(int moltiplicator) {
+  public Banknote times(int moltiplicator) {
     return new Euro(this.amount * moltiplicator); 
   }
 
