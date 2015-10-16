@@ -6,6 +6,7 @@ abstract class Banknote
 
   abstract Banknote add(Banknote addend);
   abstract Banknote times(int moltiplicator);
+  abstract int toDollarsAmount();
 
   public static Banknote dollar(int amount) {
     return new Dollar(amount);
@@ -19,5 +20,9 @@ abstract class Banknote
     return
       this.getClass() == that.getClass() &&
       this.amount == ((Banknote)that).amount;
+  }
+
+  public String toString() {
+    return this.amount + " " + getClass().getSimpleName();
   }
 }

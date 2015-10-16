@@ -7,10 +7,17 @@ public class Dollar extends Banknote {
   }
 
   public Banknote add(Banknote addend) {
-    return new Dollar(this.amount + addend.amount);
+    return new Dollar(
+      this.amount +
+      addend.toDollarsAmount()
+    );
   }
 
   public Banknote times(int moltiplicator) {
     return new Dollar(this.amount * moltiplicator); 
+  }
+
+  public int toDollarsAmount() {
+    return this.amount;
   }
 }

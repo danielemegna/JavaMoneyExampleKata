@@ -13,4 +13,8 @@ class Euro extends Banknote
   public Banknote times(int moltiplicator) {
     return new Euro(this.amount * moltiplicator); 
   }
+
+  public int toDollarsAmount() {
+    return this.amount * 2;
+  }
 }

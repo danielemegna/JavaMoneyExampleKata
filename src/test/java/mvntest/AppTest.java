@@ -48,4 +48,14 @@ public class AppTest
       assertEquals(Banknote.euro(4), fourEuro);
       assertNotEquals(Banknote.dollar(4), fourEuro);
     }
+    
+    @Test
+    public void addEurosToDollars() {
+      Banknote tenBucks = Banknote.dollar(10);
+      Banknote fiveEuro = Banknote.euro(5);
+
+      Banknote result = tenBucks.add(fiveEuro); 
+
+      assertEquals(Banknote.dollar(10 + (5*2)), result); 
+    }
 }
