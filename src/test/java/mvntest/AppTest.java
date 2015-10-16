@@ -14,7 +14,7 @@ public class AppTest extends TestCase
         return new TestSuite( AppTest.class );
     }
 
-    public void simpleMoneySum() {
+    public void testSimpleMoneySum() {
       Dollar fiveBucks = new Dollar(5);
       Dollar threeBucks = new Dollar(3);
 
