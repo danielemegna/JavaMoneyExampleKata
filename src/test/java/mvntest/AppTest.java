@@ -21,4 +21,11 @@ public class AppTest
 
       assertEquals(new Dollar(10), fiveBucks.times(2));
     }
+
+    @Test
+    public void simpleEurosMoltiplication() {
+      Euro fiveEuro = new Euro(5);
+
+      assertEquals(new Euro(10), fiveEuro.times(2));
+    }
 }
