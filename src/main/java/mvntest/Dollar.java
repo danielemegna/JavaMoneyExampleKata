@@ -9,7 +9,7 @@ public class Dollar {
   }
 
   public Dollar add(Dollar addend) {
-    return new Dollar(8);
+    return new Dollar(this.amount + addend.amount);
   }
 
   public Dollar times(int moltiplicator) {
