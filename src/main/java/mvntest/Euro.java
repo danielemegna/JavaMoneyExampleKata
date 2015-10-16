@@ -1,9 +1,7 @@
 package mvntest;
 
-class Euro
+class Euro extends Banknote
 {
-  private int amount;
-
   public Euro(int amount) {
     this.amount = amount;
   }

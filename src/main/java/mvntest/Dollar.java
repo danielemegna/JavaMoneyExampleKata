@@ -1,8 +1,6 @@
 package mvntest;
 
-public class Dollar {
-
-  private int amount;
+public class Dollar extends Banknote {
 
   public Dollar(int amount) {
     this.amount = amount;
