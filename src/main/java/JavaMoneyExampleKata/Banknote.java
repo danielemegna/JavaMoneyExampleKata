@@ -7,6 +7,7 @@ abstract class Banknote
   abstract Banknote add(Banknote addend);
   abstract Banknote times(int moltiplicator);
   abstract int toDollarsAmount();
+  abstract int toEuroAmount();
 
   public static Banknote dollar(int amount) {
     return new Dollar(amount);

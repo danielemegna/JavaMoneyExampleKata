@@ -20,4 +20,8 @@ public class Dollar extends Banknote {
   public int toDollarsAmount() {
     return this.amount;
   }
+
+  public int toEuroAmount() {
+    return this.amount / 2;
+  }
 }

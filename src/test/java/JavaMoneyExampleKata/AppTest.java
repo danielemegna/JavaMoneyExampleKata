@@ -58,4 +58,14 @@ public class AppTest
 
       assertEquals(Banknote.dollar(10 + (5*2)), result); 
     }
+
+    @Test
+    public void addDollarsToEuros() {
+      Banknote tenEuro = Banknote.euro(10);
+      Banknote sixBucks = Banknote.dollar(6);
+
+      Banknote result = tenEuro.add(sixBucks); 
+
+      assertEquals(Banknote.euro(10 + (6/2)), result); 
+    }
 }
