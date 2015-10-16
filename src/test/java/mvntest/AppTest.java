@@ -14,7 +14,10 @@ public class AppTest extends TestCase
         return new TestSuite( AppTest.class );
     }
 
-    public void testApp() {
-        assertTrue( true );
+    public void simpleMoneySum() {
+      Dollar fiveBucks = new Dollar(5);
+      Dollar threeBucks = new Dollar(3);
+
+      assertEquals(new Dollar(8), fiveBucks.add(threeBucks));
     }
 }
