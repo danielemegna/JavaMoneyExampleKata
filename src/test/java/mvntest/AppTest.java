@@ -28,4 +28,12 @@ public class AppTest
 
       assertEquals(new Euro(10), fiveEuro.times(2));
     }
+
+    @Test
+    public void simpleEurosSum() {
+      Euro fiveEuro = new Euro(5);
+      Euro fourEuro = new Euro(4);
+
+      assertEquals(new Euro(9), fiveEuro.add(fourEuro));
+    }
 }
