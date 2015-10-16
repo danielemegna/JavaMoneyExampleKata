@@ -1,4 +1,4 @@
-package mvntest;
+package JavaMoneyExampleKata;
 
 class Euro extends Banknote
 {

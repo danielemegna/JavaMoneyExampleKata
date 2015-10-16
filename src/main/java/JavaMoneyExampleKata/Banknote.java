@@ -1,4 +1,4 @@
-package mvntest;
+package JavaMoneyExampleKata;
 
 abstract class Banknote
 {

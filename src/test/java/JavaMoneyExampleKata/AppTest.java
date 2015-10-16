@@ -1,4 +1,4 @@
-package mvntest;
+package JavaMoneyExampleKata;
 
 import org.junit.Test;
 import org.junit.Before;
