@@ -13,9 +13,4 @@ class Euro extends Banknote
   public Banknote times(int moltiplicator) {
     return new Euro(this.amount * moltiplicator); 
   }
-
-  public boolean equals(Object obj) {
-    Euro that = (Euro)obj;
-    return this.amount == that.amount;
-  }
 }

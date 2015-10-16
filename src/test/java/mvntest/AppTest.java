@@ -2,6 +2,7 @@ package mvntest;
 
 import org.junit.Test;
 import org.junit.Before;
+import org.junit.Ignore;
 
 import static org.junit.Assert.*;
 
@@ -35,5 +36,16 @@ public class AppTest
       Banknote fourEuro = Banknote.euro(4);
 
       assertEquals(Banknote.euro(9), fiveEuro.add(fourEuro));
+    }
+
+    @Test
+    public void equality() {
+      Banknote fiveBucks = Banknote.dollar(5);
+      Banknote fourEuro = Banknote.euro(4);
+
+      assertEquals(Banknote.dollar(5), fiveBucks);
+      assertNotEquals(Banknote.euro(5), fiveBucks);
+      assertEquals(Banknote.euro(4), fourEuro);
+      assertNotEquals(Banknote.dollar(4), fourEuro);
     }
 }

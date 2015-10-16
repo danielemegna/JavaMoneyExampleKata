@@ -13,10 +13,4 @@ public class Dollar extends Banknote {
   public Banknote times(int moltiplicator) {
     return new Dollar(this.amount * moltiplicator); 
   }
-
-  public boolean equals(Object obj) {
-    Dollar that = (Dollar)obj;
-    return this.amount == that.amount;
-  }
-
 }

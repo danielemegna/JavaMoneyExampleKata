@@ -12,6 +12,12 @@ abstract class Banknote
   }
 
   public static Banknote euro(int amount) {
-    return new Dollar(amount);
+    return new Euro(amount);
+  }
+
+  public boolean equals(Object that) {
+    return
+      this.getClass() == that.getClass() &&
+      this.amount == ((Banknote)that).amount;
   }
 }
