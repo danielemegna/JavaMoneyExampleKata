@@ -1,20 +1,14 @@
 package mvntest;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+import org.junit.Before;
 
-public class AppTest extends TestCase
+import static org.junit.Assert.*;
+
+public class AppTest
 {
-    public AppTest( String testName ) {
-        super( testName );
-    }
-
-    public static Test suite() {
-        return new TestSuite( AppTest.class );
-    }
-
-    public void testSimpleMoneySum() {
+    @Test
+    public void simpleDollarsSum() {
       Dollar fiveBucks = new Dollar(5);
       Dollar threeBucks = new Dollar(3);
 
