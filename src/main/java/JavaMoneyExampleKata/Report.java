@@ -1,6 +1,7 @@
 package JavaMoneyExampleKata;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Report {
@@ -16,6 +17,10 @@ public class Report {
 			.stream()
 			.mapToInt(ReportItem::total)
 			.sum();
+	}
+
+	public Iterator<ReportItem> items() {
+		return items.iterator();
 	}
 
 }
