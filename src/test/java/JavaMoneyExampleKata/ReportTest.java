@@ -15,4 +15,14 @@ public class ReportTest {
 		
 		assertEquals(65000, report.total());
 	}
+	
+	@Test
+	@Ignore
+	public void reportWithDifferentCurrencies() {
+		Report report = new Report("USD");
+		report.add(new ReportItem("IBM", 1000, 25, "USD"));
+		report.add(new ReportItem("Novartis", 400, 150, "CHF"));
+		
+		assertEquals(65000, report.total());
+	}
 }
