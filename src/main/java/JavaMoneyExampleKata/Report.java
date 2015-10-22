@@ -7,14 +7,16 @@ import java.util.List;
 public class Report {
 
 	private List<ReportItem> items = new ArrayList<>();
-	private String mainCurrency = null;
+	private String mainCurrency;
+	private MoneyExchanger moneyExchanger;
 
-	public Report(String mainCurrency) {
+	public Report(String mainCurrency, MoneyExchanger moneyExchanger) {
 		this.mainCurrency = mainCurrency;
+		this.moneyExchanger = moneyExchanger;
 	}
 
 	public Report() {
-		// TODO Auto-generated constructor stub
+		this("USD", new FakeMoneyExchanger());
 	}
 
 	public void add(ReportItem reportItem) {
@@ -24,9 +26,13 @@ public class Report {
 	public int total() {
 		int total = 0;
 		for(ReportItem item : items)
-			total += item.total();
+			total += calcolateReportItemTotal(item);
 		
 		return total;
+	}
+
+	private int calcolateReportItemTotal(ReportItem item) {
+		return moneyExchanger.change(item.total(), item.currency(), mainCurrency);
 	}
 
 	public Iterator<ReportItem> items() {

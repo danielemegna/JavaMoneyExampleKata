@@ -17,9 +17,12 @@ public class ReportTest {
 	}
 	
 	@Test
-	@Ignore
 	public void reportWithDifferentCurrencies() {
-		Report report = new Report("USD");
+		MoneyExchanger moneyExchanger = new MoneyExchanger(
+			new StubStockMarket()
+		);
+		
+		Report report = new Report("USD", moneyExchanger);
 		report.add(new ReportItem("IBM", 1000, 25, "USD"));
 		report.add(new ReportItem("Novartis", 400, 150, "CHF"));
 		

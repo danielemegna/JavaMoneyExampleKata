@@ -7,7 +7,7 @@ import org.junit.Test;
 public class MoneyExchangerTest {
 
 	@Test
-	public void foo() {
+	public void moneyExchangerWorksProperly() {
 		
 		MoneyExchanger exchanger = new MoneyExchanger(
 			new StubStockMarket()

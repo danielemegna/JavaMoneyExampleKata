@@ -14,6 +14,9 @@ public class StubStockMarket implements StockMarket {
 
 	@Override
 	public Double getChangeRate(String fromCurrency, String toCurrency) {
+		if(fromCurrency == toCurrency)
+			return 1.0;
+		
 		return changeRates.get(fromCurrency).get(toCurrency);
 	}
 
