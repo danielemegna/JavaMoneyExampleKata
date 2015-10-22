@@ -2,12 +2,15 @@ package JavaMoneyExampleKata;
 
 public class MoneyExchanger {
 
+	private StockMarket stockMarket;
+
 	public MoneyExchanger(StockMarket stockMarket) {
-		
+		this.stockMarket = stockMarket;
 	}
 
 	public int change(int amount, String fromCurrency, String toCurrency) {
-		return (int) (amount / 1.5);
+		double changeRate = stockMarket.getChangeRate(fromCurrency, toCurrency);
+		return (int) (amount / changeRate);
 	}
 
 }
